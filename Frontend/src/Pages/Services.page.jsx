@@ -1,9 +1,10 @@
 import React from 'react'
+import Service from '../Componenets/Services/Service'
 
 function ServicesPage() {
   return (
     <div>
-      <h1 className='text-rose-500 text-center font-bold'>Services Page</h1>
+      <Service/>
     </div>
   )
 }

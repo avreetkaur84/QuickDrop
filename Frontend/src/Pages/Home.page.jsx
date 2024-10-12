@@ -1,9 +1,16 @@
 import React from 'react'
+import HeroSection from '../Componenets/Home/HeroSection'
+import Features from '../Componenets/Home/Features'
+import HowItWorks from '../Componenets/Home/HowItWorks'
+import { Testimonials } from '../Componenets/Home/Testimonials'
 
 function HomePage() {
   return (
     <div>
-      <h1 className='text-rose-500 text-center font-bold'>Home Page</h1>
+      <HeroSection/>
+      <Features/>
+      <HowItWorks/>
+      <Testimonials/>
     </div>
   )
 }
