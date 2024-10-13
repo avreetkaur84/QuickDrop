@@ -3,6 +3,7 @@ import { useForm, Controller } from "react-hook-form"
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useFormContext } from '../ContextApi/FormProvider';
 import axios from 'axios';
 
 function BookDeliveryForm() {
@@ -19,7 +20,7 @@ function BookDeliveryForm() {
 
   const onSubmit = async (data) => {
     console.log(data)
-    navigate('/');
+    // navigate('/');
     successOrder();
 
     // try {
@@ -47,9 +48,11 @@ function BookDeliveryForm() {
     // }
   }
 
+  const { handleAnalyzeClick } = useFormContext();
+
   return (
-    <div className="py-16">
-      <div className="rounded-2xl shadow-lg shadow-rose-400 flex justify-center flex-col mx-5 py-10 bg-white">
+    <div className="">
+      <div className="rounded-2xl shadow-lg flex justify-center flex-col mx-5 py-10 bg-white">
         <h1 className="text-center font-bold text-2xl text-rose-500 mb-9">Book Delivery Form</h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-3 mx-16">
@@ -229,7 +232,11 @@ function BookDeliveryForm() {
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="bg-rose-500 text-white font-bold py-2 px-4 rounded">
+          <button 
+            type="submit" 
+            onClick={handleAnalyzeClick} 
+            className="bg-rose-500 text-white font-bold py-2 px-4 rounded"
+          >
             Analyse
           </button>
         </form>
