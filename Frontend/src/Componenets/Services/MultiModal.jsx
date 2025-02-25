@@ -1,36 +1,46 @@
 import React from 'react'
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import DroneIcon from '@mui/icons-material/AirplanemodeActive';
-import EmergencyIcon from '@mui/icons-material/HealthAndSafety';
+import InsightsIcon from '@mui/icons-material/Insights';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import HubIcon from '@mui/icons-material/Hub';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import SecurityIcon from '@mui/icons-material/Security';
 import { Box, Grid, Card, CardContent, Typography, Button} from '@mui/material';
 
 
 const services = [
     {
-        icon: <DroneIcon style={{ fontSize: 40 }} />,
-        title: 'Drone Delivery',
-        description: 'Ultra-fast delivery using drones for lightweight items.',
+        icon: <InsightsIcon style={{ fontSize: 40 }} />, 
+        title: 'AI-Powered Scheduling',
+        description: 'Optimize delivery slots with AI-driven scheduling for maximum efficiency.',
         buttonText: 'Learn More',
     },
     {
-        icon: <LocalShippingIcon style={{ fontSize: 40 }} />,
-        title: 'Standard Delivery',
-        description: 'Regular, affordable delivery using traditional vehicles.',
+        icon: <AttachMoneyIcon style={{ fontSize: 40 }} />, 
+        title: 'Dynamic Pricing Engine',
+        description: 'Adjust delivery costs in real-time based on demand, traffic, and availability.',
         buttonText: 'Learn More',
     },
     {
-        icon: <LocalShippingIcon style={{ fontSize: 40 }} />,
-        title: 'Express Delivery',
-        description: 'Get your items delivered within hours for urgent needs.',
+        icon: <HubIcon style={{ fontSize: 40 }} />, 
+        title: 'Hub-Based Optimization',
+        description: 'Group deliveries efficiently using centralized hubs to reduce costs and delays.',
         buttonText: 'Learn More',
     },
     {
-        icon: <EmergencyIcon style={{ fontSize: 40 }} />,
-        title: 'Emergency Delivery',
-        description: 'Critical, emergency deliveries for time-sensitive orders.',
+        icon: <ChatBubbleOutlineIcon style={{ fontSize: 40 }} />, 
+        title: 'Real-Time Customer Communication',
+        description: 'Session-based messaging between customers and delivery agents.',
         buttonText: 'Learn More',
     },
+    // {
+    //     icon: <SecurityIcon style={{ fontSize: 40 }} />, 
+    //     title: 'Secure CRM & Analytics',
+    //     description: 'Track and manage customer interactions with AI-powered CRM and analytics.',
+    //     buttonText: 'Learn More',
+    // },
 ];
+
+
 
 function MultiModal() {
     return (
